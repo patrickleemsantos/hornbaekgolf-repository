@@ -8,11 +8,11 @@
 		<gap:platform name="android" />
 	</gap:platforms>
 	
-	<icon src="img/hgk-logo.png" />
-	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="ldpi" />
-	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="mdpi" />
-	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="hdpi" />
-	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="xhdpi" />
+	<icon src="img/hgk-logo.gif" />
+	<icon src="img/hgk-logo.gif" gap:platform="android" gap:qualifier="ldpi" />
+	<icon src="img/hgk-logo.gif" gap:platform="android" gap:qualifier="mdpi" />
+	<icon src="img/hgk-logo.gif" gap:platform="android" gap:qualifier="hdpi" />
+	<icon src="img/hgk-logo.gif" gap:platform="android" gap:qualifier="xhdpi" />
 	
 	<preference name="phonegap-version" value="cli-6.3.0" />
 	<preference name="orientation" value="portrait" />
