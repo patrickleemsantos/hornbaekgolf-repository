@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kitchensinkmaterial.ph" version="1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.hornbaekgolf.dk" version="1.0">
 
-	<name>Kitchen Sink Material</name>
-	<description>Kitchen Sink Material</description>
+	<name>Hornbæk Golfklub</name>
+	<description>Hornbæk Golfklub</description>
 	<author>Patrick Santos</author>
 	<gap:platforms>
 		<gap:platform name="android" />
 	</gap:platforms>
 	
-	<icon src="img/icon.png" />
-	<icon src="img/icon.png" gap:platform="android" gap:qualifier="ldpi" />
-	<icon src="img/icon.png" gap:platform="android" gap:qualifier="mdpi" />
-	<icon src="img/icon.png" gap:platform="android" gap:qualifier="hdpi" />
-	<icon src="img/icon.png" gap:platform="android" gap:qualifier="xhdpi" />
+	<icon src="img/hgk-logo.png" />
+	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="ldpi" />
+	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="mdpi" />
+	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="hdpi" />
+	<icon src="img/hgk-logo.png" gap:platform="android" gap:qualifier="xhdpi" />
 	
 	<preference name="phonegap-version" value="cli-6.3.0" />
 	<preference name="orientation" value="portrait" />
