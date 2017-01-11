@@ -3,6 +3,7 @@ var myApp = new Framework7({
     modalTitle: 'Hornbaekgolf',
     // Enable Material theme
     material: true,
+    swipePanel: 'left'
 });
 
 // Expose Internal DOM library
