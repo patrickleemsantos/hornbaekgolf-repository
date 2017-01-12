@@ -17,22 +17,7 @@ var mainView = myApp.addView('.view-main', {
 var rightView = myApp.addView('.view-right', {
 });
 
-// Show/hide preloader for remote ajax loaded pages
-// Probably should be removed on a production/local app
-$$(document).on('ajaxStart', function (e) {
-    if (e.detail.xhr.requestUrl.indexOf('autocomplete-languages.json') >= 0) {
-        // Don't show preloader for autocomplete demo requests
-        return;
-    }
-    myApp.showIndicator();
-});
-$$(document).on('ajaxComplete', function (e) {
-    if (e.detail.xhr.requestUrl.indexOf('autocomplete-languages.json') >= 0) {
-        // Don't show preloader for autocomplete demo requests
-        return;
-    }
-    myApp.hideIndicator();
-});
+document.addEventListener('backbutton', onBackKeyDown, false);
 
 // Callbacks for specific pages when it initialized
 /* ===== Modals Page events  ===== */
@@ -1073,3 +1058,45 @@ function createContentPage() {
     return;
 }
 $$(document).on('click', '.ks-generate-page', createContentPage);
+
+
+function onBackKeyDown() {
+    try {
+        if (mainView.activePage.name == 'index') {
+            if ($$('.modal-overlay').hasClass('modal-overlay-visible')) {
+                myApp.closeModal();
+            } else if ($$('body').hasClass('with-panel-left-cover')) {
+                myApp.closePanel('left');
+            } else if ($$('body').hasClass('with-panel-right-cover')) { 
+                myApp.closePanel('right');
+            } else {
+                myApp.confirm('Do you want to Exit?', 'Exit App', function() {
+                    navigator.app.clearHistory();
+                    navigator.app.exitApp();
+                });
+            }
+        } else {
+            if ($$('.popup.popup-login').length > 0) {
+                return false;
+            } else if ($$('.popover, .actions-modal, .picker-modal').length > 0) {
+                myApp.closeModal('.popover, .actions-modal, .picker-modal');
+            } else if ($$('.searchbar.searchbar-active').length > 0) {
+                $$('.searchbar.searchbar-active')[0].f7Searchbar.disable();
+            } else if ($$('.photo-browser').length > 0) {
+                $$('.photo-browser .photo-browser-close-link, .photo-browser .close-popup').trigger('click');
+            } else if ($$('.modal-overlay').hasClass('modal-overlay-visible')) {
+                myApp.closeModal();
+            } else if ($$('body').hasClass('with-panel-left-cover')) { 
+                myApp.closePanel('left');
+            } else if ($$('body').hasClass('with-panel-right-cover')) { 
+                myApp.closePanel('right');
+            }  else {
+                myApp.closeModal();
+                var view = myApp.getCurrentView();
+                view.router.back();
+            }
+        }
+    } catch (err) {
+        myApp.alert('back error: ' + err.message);
+    }
+}
