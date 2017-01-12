@@ -1061,7 +1061,6 @@ $$(document).on('click', '.ks-generate-page', createContentPage);
 
 
 function onBackKeyDown() {
-    alert('hello');
     try {
         if (mainView.activePage.name == 'index') {
             if ($$('.modal-overlay').hasClass('modal-overlay-visible')) {
