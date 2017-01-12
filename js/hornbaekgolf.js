@@ -1,5 +1,3 @@
-document.addEventListener('backbutton', onBackKeyDown, false);
-
 // Init App
 var myApp = new Framework7({
     modalTitle: 'Hornbaekgolf',
