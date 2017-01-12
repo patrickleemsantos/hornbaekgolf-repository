@@ -1,9 +1,10 @@
 // Init App
 var myApp = new Framework7({
     modalTitle: 'Hornbaekgolf',
-    // Enable Material theme
     material: true,
-    swipePanel: 'left'
+    swipePanel: 'left',
+    fastClicks: true,
+    pushState: true,
 });
 
 // Expose Internal DOM library
