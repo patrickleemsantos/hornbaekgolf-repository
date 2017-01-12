@@ -1076,22 +1076,29 @@ function onBackKeyDown() {
                 });
             }
         } else {
-            // if ($$('.popup.popup-login').length > 0) {
-            //     return false;
-            // } else 
-            if ($$('.popover, .actions-modal, .picker-modal').length > 0) {
+            if ($$('.popup.popup-login').length > 0) {
+                alert('1');
+                return false;
+            } else if ($$('.popover, .actions-modal, .picker-modal').length > 0) {
+                alert('2');
                 myApp.closeModal('.popover, .actions-modal, .picker-modal');
             } else if ($$('.searchbar.searchbar-active').length > 0) {
+                alert('3');
                 $$('.searchbar.searchbar-active')[0].f7Searchbar.disable();
             } else if ($$('.photo-browser').length > 0) {
+                alert('4');
                 $$('.photo-browser .photo-browser-close-link, .photo-browser .close-popup').trigger('click');
             } else if ($$('.modal-overlay').hasClass('modal-overlay-visible')) {
+                alert('5');
                 myApp.closeModal();
             } else if ($$('body').hasClass('with-panel-left-cover')) { 
+                alert('6');
                 myApp.closePanel('left');
             } else if ($$('body').hasClass('with-panel-right-cover')) { 
+                alert('7');
                 myApp.closePanel('right');
             }  else {
+                alert('8');
                 myApp.closeModal();
                 var view = myApp.getCurrentView();
                 view.router.back();
