@@ -1079,10 +1079,6 @@ function onBackKeyDown() {
         } else {
             if ($$('.popup.popup-login').length > 0) {
                 return false;
-            } else if ($$('.popover, .actions-modal, .picker-modal').length > 0) {
-                myApp.closeModal('.popover, .actions-modal, .picker-modal');
-                var view = myApp.getCurrentView();
-                view.router.back();
             } else if ($$('.searchbar.searchbar-active').length > 0) {
                 $$('.searchbar.searchbar-active')[0].f7Searchbar.disable();
             } else if ($$('.photo-browser').length > 0) {
@@ -1093,7 +1089,11 @@ function onBackKeyDown() {
                 myApp.closePanel('left');
             } else if ($$('body').hasClass('with-panel-right-cover')) { 
                 myApp.closePanel('right');
-            }  else {
+            } else if ($$('.popover, .actions-modal, .picker-modal').length > 0) {
+                myApp.closeModal('.popover, .actions-modal, .picker-modal');
+                var view = myApp.getCurrentView();
+                view.router.back();  
+            } else {
                 myApp.closeModal();
                 var view = myApp.getCurrentView();
                 view.router.back();
