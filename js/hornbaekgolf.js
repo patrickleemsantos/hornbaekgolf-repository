@@ -2,6 +2,7 @@
 var myApp = new Framework7({
     modalTitle: 'Hornbaekgolf',
     material: true,
+    preloadPreviousPage: false,
     swipePanel: 'left',
     fastClicks: true,
     pushState: true,
