@@ -9,10 +9,10 @@
 	</gap:platforms>
 	
 	<icon src="img/hornbaek-icon-512-512.png" />
-	<icon src="img/hornbaek-icon-ldpi" gap:platform="android" gap:qualifier="ldpi" />
-	<icon src="img/hornbaek-icon-mdpi" gap:platform="android" gap:qualifier="mdpi" />
-	<icon src="img/hornbaek-icon-hdpi" gap:platform="android" gap:qualifier="hdpi" />
-	<icon src="img/hornbaek-icon-xhdpi" gap:platform="android" gap:qualifier="xhdpi" />
+	<icon src="img/hornbaek-icon-ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+	<icon src="img/hornbaek-icon-mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+	<icon src="img/hornbaek-icon-hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+	<icon src="img/hornbaek-icon-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
 	
 	<!-- iPhone 6 / 6+ -->
 	<icon src="img/hornbaek-icon-180-180.png" platform="ios" width="180" height="180" />
