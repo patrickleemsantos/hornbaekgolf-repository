@@ -20,6 +20,7 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'PT Sans', sans-serif;
 }
 body {
   font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
@@ -1062,7 +1063,7 @@ p {
 .navbar,
 .toolbar,
 .subnavbar {
-  background: #002699;
+  background: #002F8E;
 }
 .navbar a.link,
 .toolbar a.link,
