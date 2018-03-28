@@ -39,6 +39,7 @@
 	<icon src="img/hornbaek-icon-100-100.png" platform="ios" width="100" height="100" />
 	<icon src="img/hornbaek-icon-72-72.png" platform="ios" width="72" height="72" />
 	<icon src="img/hornbaek-icon-144-144.png" platform="ios" width="144" height="144" />
+	<icon src="img/hornbaek-icon-1024-1024.png" platform="ios" width="1024" height="1024" />
 
 	<!-- Splash Screen -->
 	<!-- iPhone and iPod touch -->
